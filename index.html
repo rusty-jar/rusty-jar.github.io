@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rusty-jar</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">rusty-jar</div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="jump-to-projects-container">
+            <a href="#projects" class="jump-to-projects-btn">
+                <span>↓ Explore Projects</span>
+            </a>
+        </div>
+        <section class="profile">
+            <h1>Hi there, I'm Shahibur Rahaman <span class="wave">👋</span></h1>
+            <div class="profile-center">
+                <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3ppdTRmMm5hMTljbngyeXY0a3g2d2E2dmZsenh1OW1jZW9hMjN3NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13HgwGsXF0aiGY/giphy.gif" alt="Working on Code" class="profile-gif"/>
+            </div>
+            <p class="profile-quote">I start fires with code🔥, and then heroically put them out🧯.</p>
+            <p class="profile-tags">
+                💻 Developer &nbsp;|&nbsp; 🧐 Problem Solver &nbsp;|&nbsp; ⚙️ Systems Enthusiast &nbsp;|&nbsp; 🤖🧠 Passionate about ML
+            </p>
+            <div class="profile-links">
+                <a href="mailto:rusty.jar@proton.me">📧 Email</a>
+                <span>•</span>
+                <a href="https://www.linkedin.com/in/shahibur-r-18b678355/" target="_blank">🔗 LinkedIn</a>
+            </div>
+            <hr class="profile-divider"/>
+            <div class="profile-about">
+                <div class="profile-about">
+                    <h3>🚀 About Me</h3>
+                    <p>
+                      I'm an undergraduate student of Computer Applications with a strong passion for <strong>Machine Learning</strong>, <strong>Desktop App Development</strong>, and 
+                      <strong>Embedded Systems</strong>. I enjoy developing both desktop and web applications, and I'm driven by a love for 
+                      problem-solving. My goal is to create intuitive softwares that not only makes learning more engaging for others but also 
+                      enriches my own learning journey in the process.
+                    </p>
+                  </div>                  
+            </div>
+            
+            </div>
+            <div class="profile-banner">
+                <img src="https://capsule-render.vercel.app/api?type=waving&height=200&color=gradient&text=Born%20to%20write%20code,%20destined%20to%20debug%20disasters.&fontSize=36" alt="Banner" />
+            </div>
+        </section>
+
+        <section class="hero" id="projects">
+            <h2>Projects that I've worked on</h2>
+            <p>Explore the open-source projects that I have uploaded on GitHub</p>
+        </section>
+
+        <section class="projects">
+            <div class="project-card" onclick="window.location.href='projects/neo8085.html'">
+                <div class="project-logo-container">
+                    <img src="assets/logos/8085-logo.jpeg" alt="Neo8085 Logo" class="project-logo">
+                </div>
+                <div class="project-info">
+                    <h3>Neo8085</h3>
+                    <p>A modern implementation of the 8085 microprocessor</p>
+                    <a href="projects/neo8085.html" class="button" style="width: 90px;">Learn More</a>
+                </div>
+            </div>
+            <!-- Add more project cards here as needed -->
+
+            <div class="back-to-top-container">
+                <a href="#" class="back-to-top-btn">
+                    <span>↑ Back to Top</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">rusty-jar</span>
+                <br>
+                <br>
+                <span class="footer-tagline">Firefighter 🔥🧯❌ &nbsp; &nbsp; &nbsp; Bugfighter 🪰💀✅</span>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:rusty.jar@proton.me">Email</a>
+                <a href="https://github.com/rusty-jar" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/shahibur-r-18b678355/" target="_blank">LinkedIn</a>
+            </div>
+            <p>Copyright ©️ 2025 Shahibur Rahaman</p>
+        </div>
+    </footer>
+
+    <script>
+    // Smooth scroll for Back to Top
+    document.addEventListener('DOMContentLoaded', function() {
+        const backToTopBtn = document.querySelector('.back-to-top-btn');
+        if (backToTopBtn) {
+            backToTopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    
+        // New code for Explore Projects button
+        const exploreBtn = document.querySelector('.jump-to-projects-btn');
+        if (exploreBtn) {
+            exploreBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const projectsSection = document.getElementById('projects');
+                if (projectsSection) {
+                    const offset = 100; // Adjust this value as needed
+                    const projectsTop = projectsSection.getBoundingClientRect().top + window.pageYOffset;
+                    window.scrollTo({
+                        top: projectsTop - offset,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        }
+    });
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
